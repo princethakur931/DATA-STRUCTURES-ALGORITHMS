@@ -1,4 +1,4 @@
-# question 1. moves all zeros of an numsay in the last of an numsay 
+# question 1. moves all zeros of an array in the last of an array 
 
 # example : [1,0,2,4,0,3,0,0,8,7]  ====> [1,2,4,3,8,7,0,0,0,0]
 
@@ -19,7 +19,8 @@ def move_zero(nums):
     left=right=0
     while right<n:
         if nums[right] != 0:
-            nums[left],nums[right]=nums[right],nums[left]
+            if left != right:
+                nums[left],nums[right]=nums[right],nums[left]
             left += 1
         right += 1
 
